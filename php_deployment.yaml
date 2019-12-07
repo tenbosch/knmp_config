@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php
+  labels:
+    tier: midplane
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: contacts
+      tier: midplane
+  template:
+    metadata:
+      labels:
+        app: contacts
+        tier: midplane
+    spec:
+      volumes:
+      - name: code
+        persistentVolumeClaim:
+          claimName: php-pv-claim
+      containers:
+      - name: php
+        image: tenbosch/php-pdo:v1
+        volumeMounts:
+        - name: code
+          mountPath: /code
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-pass
+              key: password

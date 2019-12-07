@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: php
+  labels:
+    tier: midplane
+spec:
+  selector:
+    app: contacts
+    tier: midplane
+  ports:
+  - port: 9000
+    protocol: TCP
+    
