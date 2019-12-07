@@ -20,6 +20,9 @@ The is a simple contacts app. It allows you to view, create, and edit simple con
 | contact_id | int | NO | PRI | NULL | auto_increment |
 | first | varchar(50) | YES | | NULL |
 | last | varchar(50) | YES | | NULL |
+| phone | varchar(15) | YES | | NULL |
+| email | varchar (50) | YES | | NULL |
+
 
 SQL Statement to create table
 ```
@@ -29,6 +32,8 @@ CREATE TABLE contacts (
     contact_id int NOT NULL AUTO_INCREMENT,
     first varchar(50),
     last varchar(50),
+    phone varchar(15),
+    email varchar(50),
     PRIMARY KEY (contact_id)
 );
 ```
