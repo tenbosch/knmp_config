@@ -1,6 +1,7 @@
 # KNMP
 **K**ubernetes **N**GINX **M**ySQL **P**HP
 
+I created this to learn and demonstrate Kubernetes. I've tried to incorporate many kubernetes features including deployments, configmaps, secrets, services, load balancer, persistent volumes (via NFS) and more.  This is designed to run on-premises.  I've tested this in several environments (kubeadm, rancher, bare metal the hard way, EKS).  I also have a version that runs on Raspberry Pi's.  For that, you can use MariaDB ARM container instead of MySQL. 
 The is a simple contacts app. It allows you to view, create, and edit simple contact information. The front-end is a multi-node load-balanced NGINX web server. The load balancer is MetalLB. The app is written in PHP. The database is MySQL. All files are hosted on a NFS server using persistent volumes, including the PHP code and the MySQL database. Passwords are stored in secrets.
 
 ## ToDo's:
