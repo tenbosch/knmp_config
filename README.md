@@ -7,8 +7,8 @@ The is a simple contacts app. It allows you to view, create, and edit simple con
 - [ ] Re-create in it's own namespace. Include MetalLB in this so that MetalLB can be used independently for other applications
 - [ ] Create CI/CD pipeline
 - [ ] Automatically create the database/table if they doesn't exist.  Good for new deployments and demos
-- [x] Put PHP source code in github
-- [x] Put config code in github
+- [x] Put PHP source code in github - placed in private repository tenbosch/knmp_code
+- [x] Put config code in github - placed in private repository tenbosch/knmp_config
 
 ## Database Details
 - DB Name: knmp
