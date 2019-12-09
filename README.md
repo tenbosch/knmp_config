@@ -27,7 +27,7 @@ The app is a very simple contacts editor. It allows you to view, create, and edi
 | email | varchar (50) | YES | | NULL |
 
 
-SQL Statement to create table
+SQL statement to create db and table
 ```
 CREATE DATABASE knmp;
 USE knmp;
@@ -41,7 +41,7 @@ CREATE TABLE contacts (
 );
 ```
 
-## Custom Docker Container for PHP 
+## Custom Docker Container Image for PHP 
 This is hosted on Docker Hub under tenbosch/php-pdo
 
 ***Dockerfile***
@@ -52,7 +52,7 @@ CMD ["php-fpm"]
 EXPOSE 9000
 ```
 
-## Unifi configuration details
+## Ubiquiti Networks UniFi Router BGP Configuration
 The application uses a load balancer which interacts with the Unifi router via BGP.  Below are the steps to run on the router in order to setup BGP
 ```
 $ ssh admin@192.168.1.1
@@ -79,7 +79,7 @@ $ exit
 | mysql-secret.yaml | This defines the password secret for the MySQL database |
 | nginx_deployment.yaml | This defines the NGINX web server pods.  It spawns 3 replicas of the web server and is load balanced |
 | nginx_service_lb.yaml | This is the load balancer service for the NGINX web server.  This requires MetalLB to be installed and configured with a router (Unifi).  It does not require any other service |
-| nginx_service.yaml(USE ONLY WITHOUT LB) | This exposes the NGINX web server via a standard node port |
+| nginx_service.yaml (**USE THIS NODEPORT SERVICE INSTEAD IF YOU DON'T WANT LB**) | This exposes the NGINX web server via a standard node port |
 | nginx_configmap.yaml | This defines the configuration for the NGINX web server |
 | php_deployment.yaml | This defines the php server pod |
 | php_service.yaml | This exposes the PHP server to the local containers.  It’s only accessed by the NGINX server |
