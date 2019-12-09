@@ -1,7 +1,7 @@
 # KNMP
 **K**ubernetes **N**GINX **M**ySQL **P**HP (LAMP equivalent)
 
-I created this to learn and demonstrate Kubernetes. I've tried to incorporate many kubernetes features including deployments, configmaps, secrets, services, load balancer, persistent volumes (via NFS) and more.  This is designed to run on-premises.  I've tested this in several environments (kubeadm, Rancher, bare metal the hard way, GKE, and EKS).  I also have a version that runs on Raspberry Pi's.  For that, you'll have to use MariaDB ARM container instead of MySQL.  I will continue to expand this to include more features.  I'd like to incorporate a functions service ([OpenFaas](https://github.com/openfaas/faas)) into this as well.  Exposes the add/edit/delete as API web services.
+I created this to learn and demonstrate Kubernetes. I've tried to incorporate many kubernetes features including deployments, configmaps, secrets, services, load balancer, persistent volumes (via NFS) and more.  This is designed to run on-premises.  I've tested this in several environments (kubeadm, Rancher, bare metal the hard way, GKE, and EKS).  I also have a version that runs on Raspberry Pi's.  For that, you'll have to use MariaDB ARM container image (mysql_deployment.yaml) instead of MySQL.  I will continue to expand this to include more features.
 
 The app is a very simple contacts editor. It allows you to view, create, and edit simple contact information. The front-end is a multi-pod load-balanced NGINX web server. The load balancer is MetalLB. The app is written in PHP. The database is MySQL. All files are hosted on a NFS server using persistent volumes, including the PHP code and the MySQL database. Passwords are stored in secrets.
 
@@ -9,6 +9,7 @@ The app is a very simple contacts editor. It allows you to view, create, and edi
 - [ ] Re-create in it's own namespace. Include MetalLB in this so that MetalLB can be used independently for other applications
 - [ ] Create CI/CD pipeline
 - [ ] Automatically create the database/table if they doesn't exist.  Good for new deployments and demos
+- [ ] Incorporate a function service ([OpenFaas](https://github.com/openfaas/faas)) into this as well.  Exposes the add/edit/delete as API web services.
 - [x] Put PHP source code in github - placed in private repository [tenbosch/knmp_code](https://github.com/tenbosch/knmp_code)
 - [x] Put config code in github - placed in private repository [tenbosch/knmp_config](https://github.com/tenbosch/knmp_config)
 
