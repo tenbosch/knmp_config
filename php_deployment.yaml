@@ -27,6 +27,14 @@ spec:
         - name: code
           mountPath: /code
         env:
+        - name: DB_HOST
+          value: "mysql"
+        - name: DB_USER
+          value: "knmp"
+        - name: DB_NAME
+          value: "knmp"
+        - name: DB_TABLE_NAME
+          value: "contacts"
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
             secretKeyRef:

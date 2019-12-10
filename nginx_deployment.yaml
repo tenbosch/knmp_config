@@ -29,6 +29,15 @@ spec:
       containers:
       - name: nginx
         image: nginx:1.7.9
+        env:
+        - name: DB_HOST
+          value: "mysql"
+        - name: DB_USER
+          value: "knmp"
+        - name: DB_NAME
+          value: "knmp"
+        - name: DB_TABLE_NAME
+          value: "contacts"
         volumeMounts:
         - name: code
           mountPath: /code
