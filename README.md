@@ -54,7 +54,7 @@ EXPOSE 9000
 
 ## Ubiquiti Networks UniFi Router BGP Configuration
 The application uses a load balancer which interacts with the Unifi router via BGP.  Below are the steps to run on the router in order to setup BGP. 
-NOTE: Be sure to add ALL neighbors, possibly including the MASTER node.
+**NOTE**: Be sure to add ALL neighbors, possibly including the MASTER node.
 ```
 $ ssh admin@192.168.1.1
 $ configure
