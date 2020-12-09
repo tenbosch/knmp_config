@@ -69,7 +69,7 @@ $ exit
 $ show ip bgp #Run this after if MetalLB has been deployed
 $ exit
 ```
-It may take a minute or so for details to display when running '''show ip'''.
+It may take a minute or so for details to display when running ```show ip```.
 
 ## Description of configuration files
 
