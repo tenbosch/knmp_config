@@ -58,6 +58,7 @@ The application uses a load balancer which interacts with the Unifi router via B
 $ ssh admin@192.168.1.1
 $ configure
 $ set protocols bgp 64512 parameters router-id 192.168.1.1
+$ set protocols bgp 64512 neighbor 192.168.1.235 remote-as 64512
 $ set protocols bgp 64512 neighbor 192.168.1.236 remote-as 64512
 $ set protocols bgp 64512 neighbor 192.168.1.237 remote-as 64512
 $ set protocols bgp 64512 neighbor 192.168.1.238 remote-as 64512
