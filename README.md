@@ -5,6 +5,12 @@ I created this to learn and demonstrate Kubernetes. I've tried to incorporate ma
 
 The app is a very simple contacts editor. It allows you to view, create, and edit simple contact information. The front-end is a multi-pod load-balanced NGINX web server. The load balancer is MetalLB. The app is written in PHP. The database is MySQL. All files are hosted on a NFS server using persistent volumes, including the PHP code and the MySQL database. Passwords are stored in secrets.
 
+Steps to re-create the application
+1. Assumptions
+- Kubernetes is already installed
+- You have an NFS server ready to store the PHP scripts and the MySQL database.
+2. These steps assume that a successful deployment of kubernetes is up and running already.  The storage for the deployments comes from an NFS server, so in order for that to work 'nfs-common' need to be installed on all of the nodes.  To do this, ssh into each node and run ```sud apt update | sudo apt install nfs-common -y```.
+
 ## ToDo's:
 - [ ] Create CI/CD pipeline
 - [ ] Automatically create the database/table if they doesn't exist.  Good for new deployments and demos
