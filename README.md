@@ -8,7 +8,7 @@ The app is a very simple contacts editor. It allows you to view, create, and edi
 Steps to re-create the application
 1. Assumptions:
   - Kubernetes is already installed
-  - You have an NFS server ready to store the PHP scripts and the MySQL database.
+  - You have an NFS server ready to store the PHP scripts and the MySQL database and the folders have already been exported.  Update mysql-pv.yaml and php_pv.yaml with the NFS server IP and export names
 2. These steps assume that a successful deployment of kubernetes is up and running already.  The storage for the deployments comes from an NFS server, so in order for that to work 'nfs-common' need to be installed on all of the nodes.  To do this, ssh into each node and run ```sud apt update | sudo apt install nfs-common -y```.
 
 ## ToDo's:
