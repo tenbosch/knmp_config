@@ -17,10 +17,10 @@ The app is a very simple contacts editor. It allows you to view, create, and edi
 ## Steps to re-create the application
 - Deploy Kubernetes via kubeadm
 - Clone this repository: ```git clonehttps://github.com/tenbosch/knmp_code.git```
-- change create_app.sh and destroy.sh to executable ```chmod a+x create_app.sh``` and ```chmod a+x destroy_app.sh```
+- Change create_app.sh and destroy.sh to executable ```chmod a+x create_app.sh``` and ```chmod a+x destroy_app.sh```
 - Install nfs-common on **ALL** of the kubernetes nodes
-- NFS server - See mysql-pv.yaml and php_pv.yaml for details around NFS server IP and exports
-  - Copy PHP code to NFS server
+- This app requires an NFS server - See mysql-pv.yaml and php_pv.yaml for details around NFS server IP and exports
+  - Copy PHP code to correct export on NFS server
   - Creation of MySQL database can only happen once the MySQL pod is running
 - 
 
