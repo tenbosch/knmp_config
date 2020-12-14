@@ -17,8 +17,8 @@ The app is a very simple contacts editor. It allows you to view, create, and edi
 ## Steps to re-create the application
 - Deploye Kubernetes via kubeadm
 - Download all yaml files into a single directory
-- change create_app.sh and destroy.sh to executable ```chmod a+x create_app.sh destroy_app.sh```
-- Install nfs-common on ALL of the kubernetes nodes
+- change create_app.sh and destroy.sh to executable ```chmod a+x create_app.sh``` and ```chmod a+x destroy_app.sh```
+- Install nfs-common on **ALL** of the kubernetes nodes
 - NFS server - See mysql-pv.yaml and php_pv.yaml for details around NFS server IP and exports
   - Copy PHP code to NFS server
   - Creation of MySQL database can only happen once the MySQL pod is running
