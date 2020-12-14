@@ -15,8 +15,8 @@ The app is a very simple contacts editor. It allows you to view, create, and edi
 - [x] Put config code in github - placed in private repository [tenbosch/knmp_config](https://github.com/tenbosch/knmp_config)
 
 ## Steps to re-create the application
-- Deploye Kubernetes via kubeadm
-- Download all yaml files into a single directory
+- Deploy Kubernetes via kubeadm
+- Clone this repository: ```git clonehttps://github.com/tenbosch/knmp_code.git```
 - change create_app.sh and destroy.sh to executable ```chmod a+x create_app.sh``` and ```chmod a+x destroy_app.sh```
 - Install nfs-common on **ALL** of the kubernetes nodes
 - NFS server - See mysql-pv.yaml and php_pv.yaml for details around NFS server IP and exports
