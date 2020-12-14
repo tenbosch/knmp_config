@@ -9,7 +9,7 @@ The app is a very simple contacts editor. It allows you to view, create, and edi
 - [ ] Create CI/CD pipeline
 - [ ] Automatically create the database/table if they doesn't exist.  Good for new deployments and demos
 - [ ] Incorporate a function service ([OpenFaas](https://github.com/openfaas/faas)) into this as well.  Exposes the add/edit/delete as API web services.
-- [x] Automate/Script the deployment and the destruction of the app
+- [x] Automate/Script the deployment and the destruction of the app (create_app.sh and destroy_app.sh)
 - [x] Re-create in it's own namespace. Include MetalLB in this so that MetalLB can be used independently for other applications
 - [x] Put PHP source code in github - placed in private repository [tenbosch/knmp_code](https://github.com/tenbosch/knmp_code)
 - [x] Put config code in github - placed in private repository [tenbosch/knmp_config](https://github.com/tenbosch/knmp_config)
