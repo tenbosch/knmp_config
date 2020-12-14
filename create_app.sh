@@ -3,6 +3,11 @@
 # Create kubernetes user
 # contactcs_user_rb.yaml
 
+# Create MetalLB Loadbalancer
+echo -e "\nCreate MetalLB Loadbalancing services..."
+kubectl create -f metallb.yaml
+kubectl create -f metallb-configmap.yaml
+
 # Create namespace
 echo -e "\nCreating namespace..."
 kubectl create -f knmp.yaml

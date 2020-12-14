@@ -23,6 +23,11 @@ kubectl delete -f mysql-secret.yaml -n knmp
 echo -e "\nDeleting namespace..."
 kubectl delete -f knmp.yaml
 
+# Delete MetalLB Loadbalancer
+echo -e "\nDeleting MetalLB Loadbalancing services..."
+kubectl delete -f metallb.yaml
+kubectl delete -f metallb-configmap.yaml
+
 # Delete kubernetes user
 # echo -e "\nDeleting User..."
 # contactcs_user_rb.yaml
