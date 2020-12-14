@@ -22,7 +22,9 @@ The app is a very simple contacts editor. It allows you to view, create, and edi
 - This app requires an NFS server - See mysql-pv.yaml and php_pv.yaml for details around NFS server IP and exports
   - Copy PHP code to correct export on NFS server
   - Creation of MySQL database can only happen once the MySQL pod is running
-- 
+- Deploy everything ```./create_app.sh```
+- Create MySQL database if this is the initial build.  This is accomplished by logging into the MySQL pod with the command ```kubectl exec -it <pod name> -n knmp -- /bin/bash```.  Then use the MySQL client to create the database
+- Check services ```kubectl get svc -n knmp``` for the IP address of the app and use that to access the application
 
 ## Database Details
 - DB Name: knmp
