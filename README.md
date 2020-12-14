@@ -9,6 +9,7 @@ The app is a very simple contacts editor. It allows you to view, create, and edi
 - [ ] Create CI/CD pipeline
 - [ ] Automatically create the database/table if they doesn't exist.  Good for new deployments and demos
 - [ ] Incorporate a function service ([OpenFaas](https://github.com/openfaas/faas)) into this as well.  Exposes the add/edit/delete as API web services.
+- [x] Automate/Script the deployment and the destruction of the app
 - [x] Re-create in it's own namespace. Include MetalLB in this so that MetalLB can be used independently for other applications
 - [x] Put PHP source code in github - placed in private repository [tenbosch/knmp_code](https://github.com/tenbosch/knmp_code)
 - [x] Put config code in github - placed in private repository [tenbosch/knmp_config](https://github.com/tenbosch/knmp_config)
@@ -75,6 +76,8 @@ It may take a minute or so for details to display when running ```show ip```.
 
 | Files | Description |
 |--|--|
+| create_app.sh | This is a simple script that deploys the application in a specific order |
+| destroy_app.sh | This is a simple script that destroys the application |
 | metallb.yaml | MetalLB is a simple bare metal load balancer for Kubernetes.  This deployment is specific to this application |
 | metallb-configmap.yaml | This is the configuration for metallb.  It has the BGP info for communicating to the router |
 | mysql-deployment.yaml | This defines the MySQL database pod |
