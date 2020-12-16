@@ -29,7 +29,10 @@ kubectl create -f php_service.yaml -n knmp
 echo -e "\nCreating NGINX..."
 kubectl create -f nginx_configmap.yaml -n knmp
 kubectl create -f nginx_deployment.yaml -n knmp
+# The following line creates a LB service.  This only works if MetalLB is deployed correctly
 kubectl create -f nginx_service_lb.yaml -n knmp
+# If you don't deploy MetalLB, then use this service instead and comment out the line above
+# kubectl create -f nginx_service.yaml -n knmp
 
 # Display pod status
 echo -e "\nPod Status:"
