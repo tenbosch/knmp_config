@@ -14,7 +14,7 @@ The app is a very simple contacts editor. It allows you to view, create, and edi
 - [x] Put PHP source code in github - placed in private repository [tenbosch/knmp_code](https://github.com/tenbosch/knmp_code)
 - [x] Put config code in github - placed in private repository [tenbosch/knmp_config](https://github.com/tenbosch/knmp_config)
 
-## Steps to re-create the application
+## Steps to re-create the application (Work in progress)
 - Deploy Kubernetes via kubeadm
 - Clone this repository: ```git clonehttps://github.com/tenbosch/knmp_code.git```
 - Change create_app.sh and destroy.sh to executable ```chmod a+x create_app.sh``` and ```chmod a+x destroy_app.sh```
@@ -25,6 +25,7 @@ The app is a very simple contacts editor. It allows you to view, create, and edi
 - Deploy everything ```./create_app.sh```
 - Create MySQL database if this is the initial build.  This is accomplished by logging into the MySQL pod with the command ```kubectl exec -it <pod name> -n knmp -- /bin/bash```.  Then use the MySQL client to create the database
 - Check services ```kubectl get svc -n knmp``` for the IP address of the LoadBalancer service and use that to access the application
+- *Add additional steps*
 
 ## Database Details
 - DB Name: knmp
